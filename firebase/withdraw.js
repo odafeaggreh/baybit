@@ -56,9 +56,9 @@ const handleWithdraw = (user) => {
             border: 1px solid transparent;
             border-radius: .25rem;"
             >
-                Your withdrawal request has been posted! You would be contacted by your portfolio manager within the next 24 hours.
+                Your withdrawal request has been posted! Please contact your portfolio manager now for further instructions.
 
-                you could head back <a href="../dashboard/dashboard.html" style="color: black;  font-weight: bold">home</a> now.
+                you could head back to the <a href="../dashboard/dashboard.html" style="color: black;  font-weight: bold">home</a> page now.
             </div>
         `;
 
