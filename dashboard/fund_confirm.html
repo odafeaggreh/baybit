@@ -152,24 +152,57 @@
                           />
                         </svg>
                       </div>
-                      <div class="address">
-                        <div>1PBcsRdsavyJ8HyATmCaBxRTgP1WBXhCwh</div>
+                      <div class="address" id="address">
+                        1PBcsRdsavyJ8HyATmCaBxRTgP1WBXhCwh
                       </div>
                     </div>
                   </div>
                 </div>
                 <hr />
               </form>
-              <div>
-                <i class="material-icons" style="text-align: left">
-                  content_paste</i
-                >
+              <div class="icon__copy">
+                <button class="material-icons copy" id="copy">
+                  content_paste
+                </button>
               </div>
             </div>
           </div>
         </div>
       </section>
     </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-functions.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyAk7CHEJsNBu21OL9rVZk9b8Qxqon7gM40",
+        authDomain: "baybit-dev.firebaseapp.com",
+        projectId: "baybit-dev",
+        storageBucket: "baybit-dev.appspot.com",
+        messagingSenderId: "667111334408",
+        appId: "1:667111334408:web:7e5f2df707d921f16f27bd",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+
+      // initialize firebase auth and firestore
+      const auth = firebase.auth();
+      const db = firebase.firestore();
+      const functions = firebase.functions();
+
+      // update firestor settings
+      db.settings({ timeStampsInSnapshots: true });
+    </script>
+
+    <!-- Firebase script -->
+    <script src="../firebase/auth.js"></script>
+    <script src="../firebase/index.js"></script>
+    <!-- Firebase script end -->
 
     <!-- Including js files-->
     <script src="js/method-assign.js"></script>

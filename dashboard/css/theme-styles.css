@@ -7084,9 +7084,63 @@ img.mfp-img {
   text-align: center;
 }
 
+.icon__copy {
+  text-align: end;
+  position: relative;
+  top: -167px;
+  margin: 0 15px 0 0;
+}
+
+.copy {
+  text-align: left;
+  font-size: 3rem;
+  color: #fff;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+@media all and (min-width: 280px) {
+  .address {
+    font-size: 10px;
+  }
+
+  .copy {
+    font-size: 1.5rem;
+  }
+
+  .icon__copy {
+    top: -168px;
+    margin: 0px 28px 0 0;
+  }
+}
+
 @media all and (min-width: 320px) {
   .address {
     font-size: 10px;
+  }
+
+  .copy {
+    font-size: 1.6rem;
+  }
+
+  .icon__copy {
+    top: -168px;
+    margin: 0px 28px 0 0;
+  }
+}
+
+@media all and (min-width: 375px) {
+  .address {
+    font-size: 12px;
+  }
+
+  .copy {
+    font-size: 1.8rem;
+  }
+
+  .icon__copy {
+    top: -168px;
+    margin: 0px 28px 0 0;
   }
 }
 
@@ -7094,10 +7148,24 @@ img.mfp-img {
   .address {
     font-size: 12px;
   }
+
+  .copy {
+    font-size: 2rem;
+  }
+
+  .icon__copy {
+    top: -146px;
+    margin: 0px 25px 0 0;
+  }
 }
 @media all and (min-width: 768px) {
   .address {
     font-size: 14px;
+  }
+
+  .icon__copy {
+    top: -160px;
+    margin: 0px 35px 0 0;
   }
 }
 @media all and (min-width: 1440px) {

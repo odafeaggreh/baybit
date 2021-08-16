@@ -1,5 +1,17 @@
 const userInfoSection = document.querySelector("#userInfoSection");
 const dashboardBalances = document.querySelector("#dashboardBalances");
+const copy = document.querySelector("#copy");
+const add = document.querySelector("#address").textContent;
+
+// Copy wallet address to clipboard
+function copyBTCAddress() {
+  navigator.clipboard.writeText(add);
+  alert("Address has been copied");
+}
+
+copy.addEventListener("click", () => {
+  copyBTCAddress();
+});
 
 const fundForm = document.querySelector("#fundForm");
 
