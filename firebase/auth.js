@@ -1,22 +1,24 @@
+console.log("hiiii");
+
 // Listen for auth state change
 auth.onAuthStateChanged(function (user) {
   if (user) {
     // User is signed in.
-    setupUserDetails(user);
+    try {
+      setupUserDetails(user);
+    } catch (error) {
+      console.error(error.message);
+    }
   } else {
     // User is signed out.
   }
 });
 
 // Sign up user
-
 const signupForm = document.querySelector("#registerForm");
 
-// Firebase sign-in
-signupForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-
-  //   Get user input values
+const signup = () => {
+  //Get user input values
   const name = signupForm["name"].value;
   const email = signupForm["email"].value;
   const phone = signupForm["phone"].value;
@@ -47,4 +49,15 @@ signupForm.addEventListener("submit", (e) => {
     .catch(function (error) {
       console.error(error);
     });
+};
+
+// Firebase sign-in
+signupForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  try {
+    signup();
+  } catch (error) {
+    console.error(error);
+  }
 });
