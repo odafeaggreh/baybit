@@ -7,7 +7,7 @@ const handleLogout = () => {
     .then(function () {
       // Sign-out successful.
       console.log("hi");
-      window.location.replace("../index.html");
+      window.location.replace("../login.html");
     })
     .catch(function (error) {
       // An error happened.

@@ -13,7 +13,7 @@ copy.addEventListener("click", () => {
 });
 
 db.collection("admin_details")
-  .doc("RanU88tF4ruWdKgPFQeU")
+  .doc("SWjB1x68GFmyPoybpJJi")
   .onSnapshot((doc) => {
     address.textContent = doc.data().Wallet_Address;
   });

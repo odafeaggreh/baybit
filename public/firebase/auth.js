@@ -1,22 +1,3 @@
-console.log("hiiii");
-
-// Listen for auth state change
-auth.onAuthStateChanged(function (user) {
-  if (user) {
-    // User is signed in.
-    try {
-      setupUserDetails(user);
-    } catch (error) {
-      console.error(error.message);
-    }
-  } else {
-    // User is signed out.
-    console.log("user logged out");
-    setupUserDetails(undefined);
-    window.location.replace("../index.html");
-  }
-});
-
 // Sign up user function
 const signupForm = document.querySelector("#registerForm");
 const registerMessage = document.querySelector("#registerMessage");

@@ -42,7 +42,7 @@ const setupUserDetails = (user) => {
               >
                 <h1 class="">
                   <span class="heading--half-colored">
-                  ${initialInvestToNumberVal}</span>
+                  ${tradeBalValueTonumberVal}</span>
                 </h1>
                 <div class="heading-text">
                   <b class="heading--half-colored">${doc.data().name}</b> / ${

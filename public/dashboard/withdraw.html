@@ -186,12 +186,12 @@
     <script>
       // Your web app's Firebase configuration
       var firebaseConfig = {
-        apiKey: "AIzaSyAk7CHEJsNBu21OL9rVZk9b8Qxqon7gM40",
-        authDomain: "baybit-dev.firebaseapp.com",
-        projectId: "baybit-dev",
-        storageBucket: "baybit-dev.appspot.com",
-        messagingSenderId: "667111334408",
-        appId: "1:667111334408:web:7e5f2df707d921f16f27bd",
+        apiKey: "AIzaSyCx_8JwcYr6Z4DVW2xqIdZg6pApPD_PIp8",
+        authDomain: "baybitfx-f86d0.firebaseapp.com",
+        projectId: "baybitfx-f86d0",
+        storageBucket: "baybitfx-f86d0.appspot.com",
+        messagingSenderId: "393217850957",
+        appId: "1:393217850957:web:c44fda5db4e98e67ee2604",
       };
       // Initialize Firebase
       firebase.initializeApp(firebaseConfig);
@@ -208,7 +208,20 @@
     <!-- Firebase script -->
     <script src="../firebase/auth.js"></script>
     <script src="../firebase/withdraw.js"></script>
-    <script src="../firebase/logout.js></script>
+    <script src="../firebase/logout.js"></script>
+
+    <script>
+      // Listen for auth state change
+      auth.onAuthStateChanged(function (user) {
+        if (user) {
+          // User is signed in.
+        } else {
+          // User is signed out.
+          console.log("user logged out");
+          window.location.replace("../login.html");
+        }
+      });
+    </script>
     <!-- Firebase script end -->
 
     <!-- Including js files-->
@@ -255,5 +268,11 @@
 
     <script src="js/main.js"></script>
     <script src="js/process.js"></script>
+
+    <!-- TIDIO LIVE CHAT -->
+    <script
+      src="//code.tidio.co/mfj8pogupsf62maycizsjtdfdbvji09q.js"
+      async
+    ></script>
   </body>
 </html>
