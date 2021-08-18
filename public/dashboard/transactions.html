@@ -12,18 +12,18 @@
       name="viewport"
       content="width=device-width, initial-scale=1, maximum-scale=1"
     />
-    <title>Withdraw Profit</title>
+    <title>Transaction History</title>
     <meta
       property="og:description"
-      content="Invest in your future and that of your kids. We love making profits, it's time we make profits for you. Invest in Corex Investment Ltd."
+      content="Invest in your future and that of your kids. We love making profits, it's time we make profits for you. Invest in Baybitfx."
     />
     <meta
       name="keywords"
-      content="Forex, forex tradebitcoin, blockchain, bitfury, bitfury.com, Corex Investment Ltd, Corexinvestmentltd.com, online mining, Bitcoin mining"
+      content="Forex, forex tradebitcoin, blockchain, bitfury, bitfury.com, Baybitfx, Corexinvestmentltd.com, online mining, Bitcoin mining"
     />
     <meta
       name="description"
-      content="Invest in your future and that of your kids. We love making profits, it's time we make profits for you. Invest in Corex Investment Ltd."
+      content="Invest in your future and that of your kids. We love making profits, it's time we make profits for you. Invest in Baybitfx."
     />
 
     <link rel="stylesheet" type="text/css" href="css/plugins.css" />
@@ -46,12 +46,8 @@
     <header class="header" id="site-header">
       <div class="container">
         <div class="header-content-wrapper">
-          <a href="../index.html" class="">
-            <img
-              class="img-responsive"
-              src="../img/core-img/corex dash.png"
-              alt="company Logo"
-            />
+          <a href="" class="">
+            <img class="img-responsive" src="" alt="" />
           </a>
           <nav id="primary-menu" class="primary-menu">
             <!-- menu-icon-wrapper -->
@@ -79,7 +75,7 @@
 
             <ul class="primary-menu-menu">
               <li class="">
-                <a href="../index.html">Go Back Home</a>
+                <a href="../baybit-home/index.html">Go Back Home</a>
               </li>
               <li class="">
                 <a href="./dashboard.html">Dashboard</a>
@@ -96,19 +92,13 @@
                   <li class="menu-item-has-children">
                     <a href="transactions.html"> Trasnsactions </a>
                   </li>
-                  <li class="menu-item-has-children">
-                    <a href="settings.html"> Settings </a>
-                  </li>
                 </ul>
               </li>
               <li class="">
                 <a href="news.html">Market News</a>
               </li>
-              <li class="">
-                <a href="affiliate.html">Referals</a>
-              </li>
-              <li class="">
-                <a href="logout">Logout</a>
+              <li class="" id="logout" style="cursor: pointer">
+                <a>Logout</a>
               </li>
             </ul>
           </nav>
@@ -118,76 +108,53 @@
     <!-- ... end Header -->
 
     <div class="main-content-wrapper">
-      <section class="medium-padding100">
-        <div class="container">
-          <div class="row pt80">
-            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 mb30"></div>
-
-            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-              <form class="login-form form--dark" id="withdrawForm">
-                <header
-                  class="
-                    crumina-module crumina-heading
-                    heading--h2 heading--with-decoration
-                  "
-                >
-                  <p>
-                    Withdrawal requests are processed within 72 hours after the
-                    request have been placed.
-                  </p>
-                </header>
-                <div class="row">
-                  <div class="col-sm-12" style="text-align: left" id="with-err">
-                    <!-- Error container-->
-                  </div>
-                </div>
-                <label for="amount" class="input-label"
-                  >Amount to withdraw</label
-                >
-                <input
-                  class="input--dark input--squared"
-                  id="withdrawAmount"
-                  placeholder="Enter amount to withdraw"
-                  type="number"
-                />
-                <label for="address" class="input-label"
-                  >Withdrawal Address</label
-                >
-                <input
-                  class="input--dark input--squared"
-                  id="withdrawAddress"
-                  placeholder="Enter wallet address"
-                  type="text"
-                />
-                <button
-                  class="
-                    btn
-                    btn--large
-                    btn--blue-light
-                    btn--with-icon
-                    btn--icon-right
-                    full-width
-                    mt30
-                  "
-                  id="withdrawBtn"
-                >
-                  Withdraw Profit
-                  <svg class="woox-icon icon-arrow-right">
-                    <use
-                      xlink:href="svg-icons/sprites/icons.svg#icon-arrow-right"
-                    ></use>
-                  </svg>
-                </button>
-              </form>
+      <section class="medium-padding120">
+        <div class="container pt80">
+          <h5 class="heading-text">Transactions summary</h5>
+          <div class="row medium-padding100">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <table class="table--style2">
+                <thead class="thead-light">
+                  <th>Transaction Id</th>
+                  <th>Order Type</th>
+                  <th>Amount</th>
+                  <th>Status</th>
+                  <th>Date</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <!-- <td>
+                                          54094220
+                                        </td>
+                                        <td >
+                                          Wallet funding
+                                        </td>
+                                        <td >
+                                          $1000
+                                        </td>
+                                        <td>
+                                          <span class='c-primary'><b>Pending</b></span>
+                                        </td>
+                                        <td >
+                                          August 10 2020
+                                        </td> -->
+                  </tr>
+                  <tr>
+                    <td colspan="5">
+                      * This is a complete history of all transactions that took
+                      place on your trade account.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-
-            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 mb30"></div>
           </div>
+          <hr class="divider" />
         </div>
       </section>
     </div>
 
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-firestore.js"></script>
@@ -218,6 +185,7 @@
     <!-- Firebase script -->
     <script src="../firebase/auth.js"></script>
     <script src="../firebase/withdraw.js"></script>
+    <script src="../firebase/logout.js></script>
     <!-- Firebase script end -->
 
     <!-- Including js files-->

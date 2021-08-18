@@ -15,6 +15,7 @@ const handleWithdraw = (user) => {
       .doc(user.uid)
       .onSnapshot((doc) => {
         const balance = doc.data().Trade_Balance;
+        const balanceToNum = Number(balance);
         const error = `
             <div
             style="color: #842029;
@@ -64,7 +65,7 @@ const handleWithdraw = (user) => {
 
         if (withdrawAddressValue === "" || withdrawAmountValue === "") {
           with_err.innerHTML = error;
-        } else if (withdrawAmountValue > balance) {
+        } else if (withdrawAmountValue > balanceToNum) {
           with_err.innerHTML = error2;
         } else {
           with_err.innerHTML = success;
@@ -77,7 +78,6 @@ const handleWithdraw = (user) => {
 auth.onAuthStateChanged(function (user) {
   if (user) {
     // User is signed in.
-    console.log(user.uid);
     handleWithdraw(user);
     try {
       setupUserDetails(user);

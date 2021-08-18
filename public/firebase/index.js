@@ -8,19 +8,27 @@ const setupUserDetails = (user) => {
     db.collection("users")
       .doc(user.uid)
       .onSnapshot((doc) => {
-        console.log(doc.data());
+        const initialInvest = doc.data().Initial_Investment;
+        const tradeBal = doc.data().Trade_Balance;
+
+        const initialInvestToNumber = Number(initialInvest);
+        const tradeBalValueTonumber = Number(tradeBal);
 
         // display user basic info on dashboard
-        const initialInvest = doc
-          .data()
-          .Initial_Investment.toLocaleString("en-US", {
+        const initialInvestToNumberVal = initialInvestToNumber.toLocaleString(
+          "en-US",
+          {
             style: "currency",
             currency: "USD",
-          });
-        const tradeBal = doc.data().Trade_Balance.toLocaleString("en-US", {
-          style: "currency",
-          currency: "USD",
-        });
+          }
+        );
+        const tradeBalValueTonumberVal = tradeBalValueTonumber.toLocaleString(
+          "en-US",
+          {
+            style: "currency",
+            currency: "USD",
+          }
+        );
 
         const userInfo = `
         <div class="container">
@@ -34,7 +42,7 @@ const setupUserDetails = (user) => {
               >
                 <h1 class="">
                   <span class="heading--half-colored">
-                  ${initialInvest}</span>
+                  ${initialInvestToNumberVal}</span>
                 </h1>
                 <div class="heading-text">
                   <b class="heading--half-colored">${doc.data().name}</b> / ${
@@ -70,13 +78,13 @@ const setupUserDetails = (user) => {
             <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 mb30">
               <div class="crumina-module crumina-crypto-converter">
                 <div class="current-crypto">Initial Investment</div>
-                <div class="result-crypto">${initialInvest}</div>
+                <div class="result-crypto">${initialInvestToNumberVal}</div>
               </div>
             </div>
             <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 mb30">
               <div class="crumina-module crumina-crypto-converter">
                 <div class="current-crypto">Trade Balance</div>
-                <div class="result-crypto">${tradeBal}</div>
+                <div class="result-crypto">${tradeBalValueTonumberVal}</div>
               </div>
             </div>
             <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 mb30">
@@ -93,5 +101,3 @@ const setupUserDetails = (user) => {
       });
   }
 };
-
-
